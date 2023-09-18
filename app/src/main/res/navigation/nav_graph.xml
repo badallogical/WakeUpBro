@@ -7,8 +7,8 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.wakeupbro.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_setAlarmFragment"
             app:destination="@id/setAlarmFragment" />
@@ -16,13 +16,20 @@
     <fragment
         android:id="@+id/setAlarmFragment"
         android:name="com.example.wakeupbro.ui.home.SetAlarmFragment"
-        android:label="SetAlarmFragment" >
+        android:label="Set Alarm">
         <action
             android:id="@+id/action_setAlarmFragment_to_methodMathsSetting"
             app:destination="@id/methodMathsSetting" />
+        <action
+            android:id="@+id/action_setAlarmFragment_to_ringtonesFragment"
+            app:destination="@id/ringtonesFragment" />
     </fragment>
     <fragment
         android:id="@+id/methodMathsSetting"
         android:name="com.example.wakeupbro.ui.math.MethodMathsSetting"
-        android:label="MethodMathsSetting" />
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/ringtonesFragment"
+        android:name="com.example.wakeupbro.home.RingtonesFragment"
+        android:label="RingtonesFragment" />
 </navigation>

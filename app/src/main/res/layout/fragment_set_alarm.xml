@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.wakeupbro.home.SetAlarmFragment"
-    >
+    android:layout_height="match_parent" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -76,34 +74,6 @@
             <include android:id="@+id/methods" layout="@layout/methods" />
         </FrameLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_ringtone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fl_methods">
-
-            <TextView
-                style="@style/TextAppearance.AppCompat.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/btn_choose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:icon="@drawable/ic_baseline_add_24" />
-
-        </LinearLayout>
-
-
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/sw_snooze"
             android:layout_width="match_parent"
@@ -115,6 +85,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_ringtone" />
+
+        <LinearLayout
+            android:id="@+id/ll_ringtone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_methods">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:id="@+id/tv_ringtones"
+                android:layout_width="0dp"
+                android:text="Ringtones"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_ringtone_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_add_24" />
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/ll_repeat"

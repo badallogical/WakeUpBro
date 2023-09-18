@@ -25,7 +25,6 @@ import java.util.*
  */
 class SetAlarmFragment : Fragment() {
 
-
     private lateinit var binding : FragmentSetAlarmBinding
 
     override fun onCreateView(
@@ -42,8 +41,6 @@ class SetAlarmFragment : Fragment() {
 
         // set the selection if selected before
         CoroutineScope( Dispatchers.Main ).launch {
-
-
             Datastore.getBooleanValues(requireContext(),Datastore.math).collect { value ->
                 if (value) {
                     binding.methods.methodMaths.backgroundTintList =
@@ -63,6 +60,10 @@ class SetAlarmFragment : Fragment() {
         // set Qr
         binding.methods.methodQr.setOnClickListener{
 //            findNavController().navigate(R.id.QRScanner)
+        }
+
+        binding.btnRingtoneChooser.setOnClickListener {
+            findNavController().navigate(R.id.ringtonesFragment)
         }
 
         return binding.root
